@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StatToExcel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="274.709" Width="534.157">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="87*"/>
+            <ColumnDefinition Width="86*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="53*"/>
+        </Grid.RowDefinitions>
+        <DatePicker x:Name="beginDatePicker" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="241" Height="33" Grid.Row="1" Text="Дата с..."/>
+        <DatePicker x:Name="endDatePicker" HorizontalAlignment="Left" Margin="6.2,14,0,0" Grid.Row="1" VerticalAlignment="Top" Width="241" Height="33" Grid.Column="1" Text="Дата по..."/>
+        <Button x:Name="btStart" Content="Start" Grid.Column="1" HorizontalAlignment="Left" Margin="10.4,38.8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="237" Height="44" Click="btStart_Click"/>
+        <Label x:Name="lbBeginDate" Content="Дата с..." HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbEndDate" Content="Дата по..." Grid.Column="1" HorizontalAlignment="Left" Margin="10.4,10,0,0" VerticalAlignment="Top"/>
+        <StackPanel HorizontalAlignment="Left" Height="73" Margin="10,9.8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="241">
+            <Label x:Name="lbDeptName" Content="Подразделение"/>
+            <Label x:Name="lbProcName" Content="Имя процедуры" Margin="0,0,-0.4,0" RenderTransformOrigin="0.5,0.5"/>
+        </StackPanel>
+
     </Grid>
 </Window>

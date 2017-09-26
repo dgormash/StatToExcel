@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,9 +21,36 @@ namespace StatToExcel
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private static Parametrs _parametrs;
+        private DateTime _startDate;
+        private DateTime _endDate;
         public MainWindow()
         {
             InitializeComponent();
+            _parametrs = new Parametrs();
+        }
+
+        private void btStart_Click(object sender, RoutedEventArgs e)
+        {
+            _startDate = beginDatePicker.DisplayDate;
+            _endDate = endDatePicker.DisplayDate;
+            var task = new Thread(ExecuteAction) {IsBackground = false};
+            task.Start();
+        }
+
+        private  void ExecuteAction()
+        {
+            var logic = new ReportsLogic();
+            logic.Start(_startDate, _endDate);
+        }
+
+        public void UpdateLabels(Label label, string message)
+        {
+            Action action = () => label.Content = message;
+            Dispatcher.BeginInvoke(action);
         }
     }
+
+
 }
