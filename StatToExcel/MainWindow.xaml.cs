@@ -25,6 +25,9 @@ namespace StatToExcel
         private static Parametrs _parametrs;
         private DateTime _startDate;
         private DateTime _endDate;
+
+        public string Department { get;  set; }
+        public string Procedure { get; set; }
         public MainWindow()
         {
             InitializeComponent();
@@ -35,7 +38,7 @@ namespace StatToExcel
         {
             _startDate = beginDatePicker.DisplayDate;
             _endDate = endDatePicker.DisplayDate;
-            var task = new Thread(ExecuteAction) {IsBackground = false};
+            var task = new Thread(ExecuteAction) {IsBackground = true};
             task.Start();
         }
 

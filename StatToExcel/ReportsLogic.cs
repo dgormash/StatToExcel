@@ -19,6 +19,7 @@ namespace StatToExcel
         public void Start(DateTime startDate, DateTime endDate)
         {
             var dbWorker = new OracleWorker("192.168.192.1", "gaidev", "mainowner");
+            var statementSelector = new SelectStatementChooser();
             //Прогоняем весь список отделов
             for (var i = 0; i <= _departmentList.Departments.Length - 1; i++)
             {
@@ -36,7 +37,8 @@ namespace StatToExcel
                 for (var j = 0; j <= _procedures.ProcedureName.Length - 1; j++)
                 {
                     dbWorker.ExecuteProcedure(_procedures.ProcedureName[j], parametrs);
-                    var result = dbWorker.SelectData(_tables.TableNames[j]);
+                    //var result = dbWorker.SelectData(_tables.TableNames[j]);
+                    var result = dbWorker.SelectData(statementSelector.GetCommand(j));
 
                     var excelParameters = new ExcelParametrs
                     {

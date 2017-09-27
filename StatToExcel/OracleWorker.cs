@@ -29,7 +29,7 @@ namespace StatToExcel
             return new OracleConnection(connectionString);
         }
 
-        public void ExecuteProcedure(string procedureName, Parametrs parametrs)
+        public virtual void ExecuteProcedure(string procedureName, Parametrs parametrs)
         {
             try
             {
@@ -61,7 +61,7 @@ namespace StatToExcel
             }
         }
 
-        public ArrayList SelectData(string tableName)
+        public virtual ArrayList SelectData(string commandText)
         {
             var result = new ArrayList();
             try
@@ -71,7 +71,7 @@ namespace StatToExcel
                     connection.Open();
 
                     var command = connection.CreateCommand();
-                    command.CommandText = $"select * from {tableName}";
+                    command.CommandText = commandText;
 
                     var reader = command.ExecuteReader();
 
@@ -105,7 +105,7 @@ namespace StatToExcel
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, $"Ошибка селекта из {tableName}");
+                MessageBox.Show($"{e.Message}; select: {commandText}", "Ошибка селекта...");
                 return null;
             }
         }

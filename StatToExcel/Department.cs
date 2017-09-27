@@ -33,7 +33,7 @@
 
             _departments[4].Id = 5;
             _departments[4].Name = "ВАРНЕНСКИЙ";
-            ;
+
             _departments[5].Id = 6;
             _departments[5].Name = "ЕТКУЛЬСКИЙ";
 
@@ -85,101 +85,101 @@
             _departments[21].Id = 22;
             _departments[21].Name = "МИАСС";
 
-            _departments[22].Id = 23;
-            _departments[22].Name = "МАГНИТОГОРСК ПРАВОБЕРЕЖНЫЙ";
+            //_departments[22].Id = 23;
+            //_departments[22].Name = "МАГНИТОГОРСК ПРАВОБЕРЕЖНЫЙ";
 
-            _departments[23].Id = 24;
-            _departments[23].Name = "НАГАЙБАКСКИЙ";
+            _departments[22].Id = 24;
+            _departments[22].Name = "НАГАЙБАКСКИЙ";
 
-            _departments[24].Id = 25;
-            _departments[24].Name = "МАГНИТОГОРСК ЛЕНИНСКИЙ";
+            //_departments[24].Id = 25;
+            //_departments[24].Name = "МАГНИТОГОРСК ЛЕНИНСКИЙ";
 
-            _departments[25].Id = 26;
-            _departments[25].Name = "МАГНИТОГОРСК ОРДЖОНИКИДЗЕНСКИЙ";
+            //_departments[25].Id = 26;
+            //_departments[25].Name = "МАГНИТОГОРСК ОРДЖОНИКИДЗЕНСКИЙ";
 
-            _departments[26].Id = 55;
-            _departments[26].Name = "МАГНИТОГОРСК ОБДПС";
+            //_departments[26].Id = 55;
+            //_departments[26].Name = "МАГНИТОГОРСК ОБДПС";
 
-            _departments[27].Id = 27;
-            _departments[27].Name = "НЯЗЕПЕТРОВСКИЙ";
+            _departments[23].Id = 27;
+            _departments[23].Name = "НЯЗЕПЕТРОВСКИЙ";
 
-            _departments[28].Id = 28;
-            _departments[28].Name = "ОЗЕРСКИЙ";
+            _departments[24].Id = 28;
+            _departments[24].Name = "ОЗЕРСКИЙ";
 
-            _departments[29].Id = 29;
-            _departments[29].Name = "ОКТЯБРЬСКИЙ";
+            _departments[25].Id = 29;
+            _departments[25].Name = "ОКТЯБРЬСКИЙ";
 
-            _departments[30].Id = 30;
-            _departments[30].Name = "ПЛАСТ";
+            _departments[26].Id = 30;
+            _departments[26].Name = "ПЛАСТ";
 
-            _departments[31].Id = 31;
-            _departments[31].Name = "САТКИНСКИЙ";
+            _departments[27].Id = 31;
+            _departments[27].Name = "САТКИНСКИЙ";
 
-            _departments[32].Id = 32;
-            _departments[32].Name = "СНЕЖИНСКИЙ";
+            _departments[28].Id = 32;
+            _departments[28].Name = "СНЕЖИНСКИЙ";
 
-            _departments[33].Id = 33;
-            _departments[33].Name = "СОСНОВСКИЙ";
+            _departments[29].Id = 33;
+            _departments[29].Name = "СОСНОВСКИЙ";
 
-            _departments[34].Id = 34;
-            _departments[34].Name = "ТРЕХГОРНЫЙ";
+            _departments[30].Id = 34;
+            _departments[30].Name = "ТРЕХГОРНЫЙ";
 
-            _departments[35].Id = 35;
-            _departments[35].Name = "ТРОИЦКИЙ";
+            _departments[31].Id = 36;
+            _departments[31].Name = "ТРОИЦКИЙ";
 
-            _departments[36].Id = 37;
-            _departments[36].Name = "УВЕЛЬСКИЙ";
+            _departments[32].Id = 37;
+            _departments[32].Name = "УВЕЛЬСКИЙ";
 
-            _departments[37].Id = 38;
-            _departments[37].Name = "УЙСКИЙ";
+            _departments[33].Id = 38;
+            _departments[33].Name = "УЙСКИЙ";
 
-            _departments[38].Id = 39;
-            _departments[38].Name = "УСТЬ - КАТАВ";
+            _departments[34].Id = 39;
+            _departments[34].Name = "УСТЬ - КАТАВ";
 
-            _departments[39].Id = 40;
-            _departments[39].Name = "УФАЛЕЙСКИЙ";
+            _departments[35].Id = 40;
+            _departments[35].Name = "УФАЛЕЙСКИЙ";
 
-            _departments[40].Id = 41;
-            _departments[40].Name = "ЧЕБАРКУЛЬСКИЙ";
+            _departments[36].Id = 41;
+            _departments[36].Name = "ЧЕБАРКУЛЬСКИЙ";
 
-            _departments[41].Id = 42;
-            _departments[41].Name = "ЧЕСМЕНСКИЙ";
+            _departments[37].Id = 42;
+            _departments[37].Name = "ЧЕСМЕНСКИЙ";
 
-            _departments[42].Id = 43;
-            _departments[42].Name = "ЮЖНОУРАЛЬСК";
+            _departments[38].Id = 43;
+            _departments[38].Name = "ЮЖНОУРАЛЬСК";
             
-            _departments[43].Id = 44;
-            _departments[43].Name = "ЧЕЛЯБИНСК";
+            //_departments[43].Id = 44;
+            //_departments[43].Name = "ЧЕЛЯБИНСК";
 
-            _departments[44].Id = 45;
-            _departments[44].Name = "ЧЕЛЯБИНСК КАЛИНИНСКИЙ";
+            //_departments[44].Id = 45;
+            //_departments[44].Name = "ЧЕЛЯБИНСК КАЛИНИНСКИЙ";
 
-            _departments[45].Id = 46;
-            _departments[45].Name = "ЧЕЛЯБИНСК ЛЕНИНСКИЙ";
+            //_departments[45].Id = 46;
+            //_departments[45].Name = "ЧЕЛЯБИНСК ЛЕНИНСКИЙ";
 
-            _departments[46].Id = 47;
-            _departments[46].Name = "ЧЕЛЯБИНСК МЕТАЛЛУРГИЧЕСКИЙ";
+            //_departments[46].Id = 47;
+            //_departments[46].Name = "ЧЕЛЯБИНСК МЕТАЛЛУРГИЧЕСКИЙ";
 
-            _departments[47].Id = 48;
-            _departments[47].Name = "ЧЕЛЯБИНСК СОВЕТСКИЙ";
+            //_departments[47].Id = 48;
+            //_departments[47].Name = "ЧЕЛЯБИНСК СОВЕТСКИЙ";
 
-            _departments[48].Id = 49;
-            _departments[48].Name = "ЧЕЛЯБИНСК ТРАКТОРОЗАВОДСКИЙ";
+            //_departments[48].Id = 49;
+            //_departments[48].Name = "ЧЕЛЯБИНСК ТРАКТОРОЗАВОДСКИЙ";
 
-            _departments[49].Id = 50;
-            _departments[49].Name = "ЧЕЛЯБИНСК ЦЕНРАЛЬНЫЙ";
+            //_departments[49].Id = 50;
+            //_departments[49].Name = "ЧЕЛЯБИНСК ЦЕНРАЛЬНЫЙ";
 
-            _departments[50].Id = 51;
-            _departments[50].Name = "ЧЕЛЯБИНСК КУРЧАТОВСКИЙ";
+            //_departments[50].Id = 51;
+            //_departments[50].Name = "ЧЕЛЯБИНСК КУРЧАТОВСКИЙ";
 
-            _departments[51].Id = 52;
-            _departments[51].Name = "ЧЕЛЯБИНСК ПОЛК ДПС";
+            _departments[39].Id = 52;
+            _departments[39].Name = "ЧЕЛЯБИНСК ПОЛК ДПС";
 
-            _departments[52].Id = 53;
-            _departments[52].Name = "УГАИ";
+            _departments[40].Id = 53;
+            _departments[40].Name = "УГАИ";
 
-            _departments[53].Id = 54;
-            _departments[53].Name = "ПОЛК ДПС ГИБДД ГУ МВД ПО ЧЕЛЯБИНСКОЙ ОБЛ";
+            _departments[41].Id = 54;
+            _departments[41].Name = "ПОЛК ДПС ГИБДД ГУ МВД ПО ЧЕЛЯБИНСКОЙ ОБЛ";
 
             //56  "МИАССКИЙ ОРДПС
             //57  "ЗЛАТОУСТ ОРДПС
