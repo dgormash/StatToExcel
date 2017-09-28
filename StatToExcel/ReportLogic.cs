@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Security.Cryptography;
 using System.Windows;
 
 namespace StatToExcel
 {
     public class ReportLogic:AbstractReportsLogic
     {
-        public override void Start(DateTime startDate, DateTime endDate)
+        public override void Start(DateTime startDate, DateTime endDate, ProcedureExceptions exceptions)
         {
             var parameters = new Parametrs
             {
@@ -17,7 +18,11 @@ namespace StatToExcel
             //1. Прогоняем список процедур
             for (var i = 0; i <= _procedures.ProcedureName.Length - 1; i++)
             {
-                _dbWorker.ExecuteProcedure(_procedures.ProcedureName[i], parameters);
+
+                if (!exceptions.Exceptions.Contains(i))
+                {
+                    _dbWorker.ExecuteProcedure(_procedures.ProcedureName[i], parameters);
+                }
             }
 
             //2. Для каждого подразделения выполняем селект по списку, передаём результат в excelworker
@@ -26,7 +31,8 @@ namespace StatToExcel
                 var excelWorker = new ExcelWorker();
                 for (var j = 0; j <= _tables.TableNames.Length - 1; j++)
                 {
-                    var result = _dbWorker.SelectData(_statementSelector.GetCommand(j), _departmentList.Departments[i].Id);
+                    var result = _dbWorker.SelectData(_statementSelector.GetCommand(j),
+                        _departmentList.Departments[i].Id);
 
                     var excelParameters = new ExcelParametrs
                     {

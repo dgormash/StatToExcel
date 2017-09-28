@@ -5,25 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StatToExcel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="274.709" Width="534.157">
+        Title="MainWindow" Height="391.029" Width="677.357">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="87*"/>
             <ColumnDefinition Width="86*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="16*"/>
-            <RowDefinition Height="38*"/>
-            <RowDefinition Height="53*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="116*"/>
         </Grid.RowDefinitions>
-        <DatePicker x:Name="beginDatePicker" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="241" Height="33" Grid.Row="1" Text="Дата с..."/>
-        <DatePicker x:Name="endDatePicker" HorizontalAlignment="Left" Margin="6.2,14,0,0" Grid.Row="1" VerticalAlignment="Top" Width="241" Height="33" Grid.Column="1" Text="Дата по..."/>
-        <Button x:Name="btStart" Content="Start" Grid.Column="1" HorizontalAlignment="Left" Margin="10.4,38.8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="237" Height="44" Click="btStart_Click"/>
-        <Label x:Name="lbBeginDate" Content="Дата с..." HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbEndDate" Content="Дата по..." Grid.Column="1" HorizontalAlignment="Left" Margin="10.4,10,0,0" VerticalAlignment="Top"/>
-        <StackPanel HorizontalAlignment="Left" Height="73" Margin="10,9.8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="241">
+        <DatePicker x:Name="beginDatePicker" HorizontalAlignment="Left" Margin="10,13.8,0,0" VerticalAlignment="Top" Width="241" Height="33" Grid.Row="1" Text="Дата с..."/>
+        <DatePicker x:Name="endDatePicker" HorizontalAlignment="Left" Margin="5.8,13.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="241" Height="33" Grid.Column="1" Text="Дата по..."/>
+        <Button x:Name="btStart" Content="Start" Grid.Column="1" HorizontalAlignment="Left" Margin="88.8,195.2,0,0" Grid.Row="2" VerticalAlignment="Top" Width="237" Height="44" Click="btStart_Click"/>
+        <Label x:Name="lbBeginDate" Content="Дата с..." HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="53"/>
+        <Label x:Name="lbEndDate" Content="Дата по..." Grid.Column="1" HorizontalAlignment="Left" Margin="10.8,10,0,0" VerticalAlignment="Top" Height="26" Width="60"/>
+        <StackPanel HorizontalAlignment="Left" Height="73" Margin="10,6.2,0,0" Grid.Row="2" VerticalAlignment="Top" Width="241">
             <Label x:Name="lbDeptName" Content="Подразделение"/>
             <Label x:Name="lbProcName" Content="Имя процедуры" Margin="0,0,-0.4,0" RenderTransformOrigin="0.5,0.5"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="165" Margin="9.8,10.2,0,0" Grid.Row="2" VerticalAlignment="Top" Width="316" Grid.Column="1">
+            <CheckBox x:Name="chbNs42" Content="Отсутсвие мер (этап 42)" Checked="chbNs42_Checked" Margin="0,0,-0.2,0" IsChecked="True"/>
+            <CheckBox x:Name="chbNs32" Content="Нар. ср. напр. в суд (этап 32)" IsChecked="True"/>
+            <CheckBox x:Name="chb1207" Content="Несост-ие по ст. 12.7 ч.2" IsChecked="True"/>
+            <CheckBox x:Name="chb264" Content="Невозб-ие ст. 264 прим. 1" IsChecked="True"/>
+            <CheckBox x:Name="chb2025" Content="Несост-ие по ст. 20.25" IsChecked="True"/>
+            <CheckBox x:Name="chbNotPay" Content="Выдача ВУ без оплаты" IsChecked="True"/>
+            <CheckBox x:Name="chbFssp" Content="Ненапр-ие в ФССП" Margin="0,0,-0.2,0" IsChecked="True"/>
+            <CheckBox x:Name="chbPovt" Content="Неприм-ие повторности" Margin="0,0,-0.2,0" IsChecked="True"/>
+            <CheckBox x:Name="chb1717" Content="Неприм-ие ст. 17.17" Margin="0,0,-0.2,0" IsChecked="True"/>
+            <CheckBox x:Name="chbRoz" Content="Совпадение с розыском" IsChecked="True"/>
         </StackPanel>
 
     </Grid>

@@ -1,7 +1,11 @@
-﻿namespace StatToExcel
+﻿using System.Collections.Generic;
+
+namespace StatToExcel
 {
     public class Procedures
     {
+        public List<int> Exceptions { get; set; }
+
         public string[] ProcedureName { get;  set; }
 
         public Procedures()
@@ -18,6 +22,11 @@
             ProcedureName[7] = "GAIDEV.LISH_STAT_povt";
             ProcedureName[8] = "GAIDEV.LISH_STAT_1717";
             ProcedureName[9] = "GAIDEV.LISH_STAT_ROZ";
+        }
+
+        public void SetExcepion()
+        {
+            
         }
     }
 }
