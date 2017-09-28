@@ -8,5 +8,7 @@ namespace StatToExcel
         void ExecuteProcedure(string procedureName, Parametrs parametrs);
 
         ArrayList SelectData(string commandText);
+
+        ArrayList SelectData(string commandText, int id);
     }
 }

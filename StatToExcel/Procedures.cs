@@ -6,7 +6,7 @@
 
         public Procedures()
         {
-            ProcedureName = new string[8];
+            ProcedureName = new string[10];
 
             ProcedureName[0] = "GAIDEV.LISH_STAT_NS42";
             ProcedureName[1] = "GAIDEV.LISH_STAT_NS32";
@@ -16,6 +16,8 @@
             ProcedureName[5] = "GAIDEV.LISH_STAT_NOTPAY";
             ProcedureName[6] = "GAIDEV.LISH_STAT_FSSP";
             ProcedureName[7] = "GAIDEV.LISH_STAT_povt";
+            ProcedureName[8] = "GAIDEV.LISH_STAT_1717";
+            ProcedureName[9] = "GAIDEV.LISH_STAT_ROZ";
         }
     }
 }

@@ -44,7 +44,7 @@ namespace StatToExcel
 
         private  void ExecuteAction()
         {
-            var logic = new ReportsLogic();
+            var logic = new ReportLogic();
             logic.Start(_startDate, _endDate);
         }
 

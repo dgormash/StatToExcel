@@ -63,7 +63,7 @@ namespace StatToExcel
 
         public virtual ArrayList SelectData(string commandText)
         {
-            var result = new ArrayList();
+            ArrayList result;
             try
             {
                 using (var connection = GetConnetion(_connectionString.ToString()))
@@ -72,42 +72,84 @@ namespace StatToExcel
 
                     var command = connection.CreateCommand();
                     command.CommandText = commandText;
-
-                    var reader = command.ExecuteReader();
-
-                    if (!reader.HasRows) return null;
-
-                    //Создаём заголовок таблицы
-                    var header = new string[reader.FieldCount];
-                    for (var i = 0; i <= reader.FieldCount - 1; i++)
-                    {
-                        header[i] = reader.GetName(i);
-                    }
-
-                    result.Add(header);
-
-                    //Создаём саму таблицу
-                    while (reader.Read())
-                    {
-                        var data = new string[reader.FieldCount];
-                        for (var i = 0; i <= reader.FieldCount - 1; i++)
-                        {
-                            data[i] = reader[i].ToString();
-                        }
-                        result.Add(data);
-                    }
-
-                    reader.Dispose();
+                    result = GetDataFromCommand(command);
                     command.Dispose();
                 }
-
-                return result;
             }
             catch (Exception e)
             {
-                MessageBox.Show($"{e.Message}; select: {commandText}", "Ошибка селекта...");
+                MessageBox.Show($"Ошибка: {e.Message}", "Ошибка open connection");
                 return null;
             }
+
+            return result;
+        }
+
+        public virtual ArrayList SelectData(string commandText, int id)
+        {
+            ArrayList result;
+            try
+            {
+               
+                using (var connection = GetConnetion(_connectionString.ToString()))
+                {
+                    connection.Open();
+                    var command = connection.CreateCommand();
+                    command.CommandText = commandText;
+                    command.Parameters.Add("DetenID", OracleDbType.Varchar2, id, ParameterDirection.Input);
+
+                    result = GetDataFromCommand(command);
+                }
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show($"Ошибка: {e.Message}", "Ошибка open connection");
+                return null;
+            }
+
+            return result;
+        }
+
+        protected virtual ArrayList GetDataFromCommand(OracleCommand command)
+        {
+            var result = new ArrayList();
+
+            try
+            {
+                var reader = command.ExecuteReader();
+
+                if (!reader.HasRows) return null;
+
+                //Создаём заголовок таблицы
+                var header = new string[reader.FieldCount];
+                for (var i = 0; i <= reader.FieldCount - 1; i++)
+                {
+                    header[i] = reader.GetName(i);
+                }
+
+                result.Add(header);
+
+                //Создаём саму таблицу
+                while (reader.Read())
+                {
+                    var data = new string[reader.FieldCount];
+                    for (var i = 0; i <= reader.FieldCount - 1; i++)
+                    {
+                        data[i] = reader[i].ToString();
+                    }
+                    result.Add(data);
+                }
+
+                reader.Dispose();
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show($"{e.Message}; select: {command.CommandText}", "Ошибка селекта...");
+                return null;
+            }
+           return result;
         }
     }
 }

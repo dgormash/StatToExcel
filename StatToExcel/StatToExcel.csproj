@@ -82,8 +82,9 @@
     <Compile Include="ExcelParametrs.cs" />
     <Compile Include="ExcelWorker.cs" />
     <Compile Include="ISelectCommand.cs" />
+    <Compile Include="ReportLogic.cs" />
     <Compile Include="Procedures.cs" />
-    <Compile Include="ReportsLogic.cs" />
+    <Compile Include="AbstractReportsLogic.cs" />
     <Compile Include="SelectStatementChooser.cs" />
     <Compile Include="Tables.cs" />
     <Page Include="MainWindow.xaml">

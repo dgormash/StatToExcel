@@ -14,7 +14,7 @@
 
         public DepartmentList()
         {
-            _departments = new Department[54];
+            _departments = new Department[42];
 
             for(var i = 0; i <= _departments.Length - 1; i++)
                 _departments[i] = new Department();

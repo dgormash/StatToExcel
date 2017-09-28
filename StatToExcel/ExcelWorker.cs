@@ -49,6 +49,12 @@ namespace StatToExcel
                 case "STAT_LISH_povt":
                     sheetName = "Неприм-ие повторности";
                     break;
+                case "STAT_LISH_1717":
+                    sheetName = "Неприм-ие ст. 17.17";
+                    break;
+                case "STAT_LISH_ROZ":
+                    sheetName = "Совпадение с розыском";
+                    break;
             }
 
             var sheet = _book.CreateSheet(sheetName);
